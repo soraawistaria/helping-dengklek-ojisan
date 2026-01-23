@@ -2,33 +2,18 @@
 using namespace std;
 
 int main() {
-    for (int luas = 100000; luas <= 200000; luas++) {
-        // Jika luas ini bukan bilangan genap, iterasi ini bisa dihentikan
-        // (dilewati), karena luas ini pasti tidak memenuhi syarat.
-        if (luas % 2 != 0) {
-            continue;
-        }
-        
-        // Sekarang, kita akan cek apakah luas ini merupakan bilangan kuadrat sempurna.
-        bool kuadrat_sempurna = false;
+    int N = 10;
 
-        for (int k = 1; k <= luas; k++) {
-            // Jika luas adalah tepat k * k,
-            // maka luas ini merupakan bilangan kuadrat sempurna.
-            if (k * k == luas) {
-                kuadrat_sempurna = true;
+    for (int i = 1; i <= N; i++) {
+        for (int j = 1; j <= N; j++) {
+            if (i == 1 || j == 1 || i == N || j == N) {
+                // jika baris atau kolom saat ini adalah yang pertama atau terakhir, cetak bintang
+                cout << "*";
+            } else {
+                // selain itu, cetak titik
+                cout << ".";
             }
         }
-
-        if (kuadrat_sempurna) {
-            // Kita telah menemukan luas terkecil yang memenuhi seluruh syarat.
-
-            // Cetak luas ini.
-            cout << luas << endl;
-
-            // Kita tidak perlu lagi melanjutkan perulangan.
-            break;
-        }
+        cout << endl;
     }
 }
-
