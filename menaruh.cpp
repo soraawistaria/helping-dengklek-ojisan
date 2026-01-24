@@ -2,19 +2,10 @@
 using namespace std;
 
 int main() {
-    int N = 10;
-
-    for (int i = 1; i <= N; i++) {
-        // cetak i buah "*"
-        for (int j = 1; j <= i; j++) {
-            cout << "*";
-        }
-
-        // sisanya, cetak "."
-        for (int j = 10; j > i; j--) {
-            cout << ".";
-        }
-
-        cout << endl;
+    for (int i = 0; i < 10; i++) {
+    if (i % 2 == 0) {
+        continue;
+    }
+    cout << "*";
     }
 }
