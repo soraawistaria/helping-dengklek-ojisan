@@ -2,18 +2,18 @@
 #include <vector>
 using namespace std;
 
-void misteri(vector<int>& v, int a) {
-    for (int i = 0; i < v.size(); i++) {
-        v[i] *= a;  //perkalian  skalar vektor
+void misteri(int& g, int a) {
+    for (int i = 0; i < g; i++) {
+        g *= a;  //perkalian  skalar vektor
     }
 }
 
 int main() {
-    vector<int> v = {1, 2, 3};
-    misteri(v, 10);
+    int g = 5;
+    misteri(g, 10);
 
     int total = 0;
-    for (int x : v) {   // setiap x adalah nilai masing' v, perulangan sejumlah dengan v.size()
+    for (int x = 0; x <= g; x++) {   // setiap x adalah nilai masing' v, perulangan sejumlah dengan v.size()
         total += x;
     }
     cout << total << endl;
