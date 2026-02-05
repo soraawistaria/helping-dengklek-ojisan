@@ -8,3 +8,4 @@ int main() {
     long long luas = panjang * tinggi;
     cout << luas << endl;
 }
+// long long merupakan int dengan memori lebih besar. sedangkan double, tipe float dengan memori lebih besar
