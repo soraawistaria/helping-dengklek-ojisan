@@ -6,7 +6,7 @@ int faktorial(int n) {
     if (n <= 1) {
         return 1;
     } else {
-        return faktorial(n-1);
+        return n * faktorial(n-1); //rekursi adalah memanggil diri sendiri
     }
 
 }
