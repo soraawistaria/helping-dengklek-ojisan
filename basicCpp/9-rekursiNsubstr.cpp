@@ -20,3 +20,5 @@ int hitung_vokal(string s) {
 int main() {
     cout << hitung_vokal("lorem ipsum dolor sit amet fermentum egestas luctus praesent torquent justo.") << endl;
 }
+
+//substr(1) memotong indeks 1 hingga akhir string
