@@ -3,11 +3,12 @@
 using namespace std;
 
 bool palindrom(string s) {
-    if (s.substr(0 ,1) != s.substr(s.size(), 1)) {
-        return false;
-    } else {
-        palindrom(s.substr(1));
+    if (s.length() <= 1) {
         return true;
+    } else if (s[0] == s[s.length() - 1]) {
+        return palindrom((s.substr(1, s.length() - 2)));
+    } else {
+        return false;
     }
 }
 
