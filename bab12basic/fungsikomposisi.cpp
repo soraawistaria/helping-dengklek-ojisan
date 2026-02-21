@@ -9,11 +9,9 @@ int main() {
     cin >> K;
     cin >> x;
 
-    x = abs(A * x + B);
-    int hasil = 1;
 
     for (int i = 0; i < K; i++) {
-        hasil *= x;
+        x = abs(A * x + B);
     }
 
     cout << x << endl;
