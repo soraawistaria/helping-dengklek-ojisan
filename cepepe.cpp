@@ -2,23 +2,21 @@
 #include <string>
 using namespace std;
 
-bool palindrom(string s) {
-    // string dibalik = "";
-    // bool answer = false;
-
-    if (s.length() <= 1) {
-        return false;
-    } else if (s[0] == s[s.length()-1]) {
-        return (s.substr(1), s.length() -2);
-        
-    } else {
-        return false;
+void draw(int A) {
+    if (A <= 0) {
+        return;
     }
 
-    // return answer;
+    draw(A-1);
+
+    for (int i = 0; i < A; i++) {
+        cout << "#";
+    }
+    cout << endl;
 }
 
 // Fungsi main() di bawah tidak boleh diubah!
 int main() {
-    cout << palindrom("ibu ratna antar ubi") << endl;
+    int A = 5;
+    draw(A);
 }
