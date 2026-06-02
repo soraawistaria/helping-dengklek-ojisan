@@ -2,9 +2,9 @@
 using namespace std;
 
 int rotasi(int x) {
-    int digit_satu = x / 100;
+    int digit_pertama = x / 100;
     int dua_digit = x % 100;
-    return (dua_digit * 10) + digit_satu;
+    return (dua_digit * 10) + digit_pertama;
 }
 
 int main() {

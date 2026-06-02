@@ -6,18 +6,23 @@ int main() {
     cin >> N;
 
     int A[N];
+    int B[N];
     for (int i = 0; i < N; i++) {
         cin >> A[i];
     }
-
-    sort(A, A + N);
-
-    int smallest = 0;
-
     for (int i = 0; i < N; i++) {
-        if (A[i] == smallest) {
-            smallest = A[i] + 1;
-        }
+        cin >> B[i];
     }
-    cout << smallest;
+
+    sort(B, B + N);
+
+    int C[N];
+    int total = 0;
+    for (int i = 0; i < N; i++) {
+        C[i] = A[i] * B[i];
+        total += C[i];
+    }
+
+    cout << total;
+
 }
