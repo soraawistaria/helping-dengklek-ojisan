@@ -10,9 +10,18 @@ int main() {
         cin >> A[i];
     }
 
+    int angka_sama = 0;
     for (int i=1; i<=N; i++) {
-        if(A[i+1] == A[i] + 1) {
-            
+        if(A[i+1] == A[i]) {
+            angka_sama++;
         }
+    }
+
+    if (angka_sama == 0) {
+        cout << N + 1;
+    } else if (angka_sama == 1) {
+        cout << N;
+    } else if (angka_sama > 1) {
+        cout << 0;
     }
 }
